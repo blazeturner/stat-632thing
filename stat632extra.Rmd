@@ -22,13 +22,13 @@ ggplot(Employee_Attrition, aes(EnvironmentSatisfaction,Attrition )) + geom_point
 geom_smooth(method = "glm", method.args = list(family = "binomial"), se=F)
 
 
-#ggplot(Employee_Attrition, aes(Age,Attrition )) + geom_point() +
-#geom_smooth(method = "glm", method.args = list(family = "binomial"), se=F)
+ggplot(Employee_Attrition, aes(Age,Attrition )) + geom_point() +
+geom_smooth(method = "glm", method.args = list(family = "binomial"), se=F)
 
 
 
-# ggplot(Employee_Attrition, aes(TrainingTimesLastYear,Attrition )) + geom_point() +
-#geom_smooth(method = "glm", method.args = list(family = "binomial"), se=F)
+ ggplot(Employee_Attrition, aes(TrainingTimesLastYear,Attrition )) + geom_point() +
+geom_smooth(method = "glm", method.args = list(family = "binomial"), se=F)
 
 Employee_Attrition$Attrition <- ifelse(Employee_Attrition$Attrition == "Yes",1,0)
 
